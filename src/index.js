@@ -4,19 +4,28 @@ import {isValid} from "./utils";
 import {Question} from "./question";
 
 
+window.addEventListener('load', Question.renderList);
+
 
 
 const form = document.getElementById('form');
-
+form.addEventListener('submit', submitFormHandler)
 
 
 const input = form.querySelector('#ask');
+
+
 const submitBtn = form.querySelector('#submit');
 input.addEventListener('input', ()=>{
     submitBtn.disabled = !isValid(input.value)
 })
 
-form.addEventListener('submit', submitFormHandler)
+const modalBtn = document.querySelector('#modal-btn');
+modalBtn.addEventListener('click', openModal);
+
+function openModal(){
+    console.log("openModal")
+}
 
 function submitFormHandler($event){
     $event.preventDefault();

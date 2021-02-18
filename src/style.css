@@ -51,7 +51,11 @@ button {
 .list li{
     margin-bottom: 20px;
 }
-
+.floating-btn{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
 /**
  * Content CSS
  */

@@ -9,6 +9,8 @@
     <title>My Filin</title>
 </head>
 <body>
+<button class="mui-btn mui-btn--fab mui-btn--accent floating-btn" id="modal-btn">All</button>
+
 <div id="sidebar">
     <div class="mui--text-white mui--text-display1 mui--align-vertical">SAMPLE BLOG</div>
 </div>
@@ -16,13 +18,15 @@
     <div class="mui-row">
         <div class="mui-col-sm-10 mui-col-sm-offset-1">
             <form class="mui-form" id="form">
-                <div class="mui-textfield">
-                    <input id="ask" type="text" placeholder="Input 1" required minlength="10" maxlength="256">
+                <h3>Question form</h3>
+                <div class="mui-textfield mui-textfield--float-label">
+                    <input id="ask" type="text" required minlength="10" maxlength="256">
                     <label for="ask">Ask me</label>
                 </div>
                 <button type="submit" id="submit" class="mui-btn mui-btn--raised mui-btn--primary" disabled>Submit</button>
             </form>
             <section class="blog-section">
+                <h3>Your questions:</h3>
                 <ul id="list" class="list">
                     <!--<li class="list-item">
                         <H2 class="">MUI Acquires New Features</H2>
