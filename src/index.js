@@ -18,6 +18,7 @@ const input = form.querySelector('#ask');
 const submitBtn = form.querySelector('#submit');
 input.addEventListener('input', ()=>{
     submitBtn.disabled = !isValid(input.value)
+
 })
 
 const modalBtn = document.querySelector('#modal-btn');
