@@ -53,7 +53,7 @@ export class Question {
 
 }
 
-function addToLocalStorage(question) {
+export function addToLocalStorage(question) {
     const questions = getKeyFromLocalStorage('questions');
     questions.push(question);
     localStorage.setItem('questions', JSON.stringify(questions));

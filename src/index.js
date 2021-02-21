@@ -1,6 +1,6 @@
 import css from "./style.css";
 import {createModal, isValid} from "./utils";
-import {Question} from "./question";
+import {addToLocalStorage, Question} from "./question";
 import {authWithLoginAndPass, getAuthForm} from "./auth";
 
 
@@ -66,8 +66,8 @@ function renderModalAfterAuth(content) {
         createModal("Error", content)
     }else {
         createModal("Result", Question.listToHtml(content));
-        //localStorage.setItem('questions', JSON.stringify(content));
-        //Question.renderList();
+        addToLocalStorage(content);
+        Question.renderList();
     }
 }
 
